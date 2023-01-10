@@ -1,0 +1,10 @@
+#BlueJ class context
+comment0.target=ProgramInfo
+comment0.text=\n\ Programmer\:\ \ \ \ your\ name\ here\n\ Class\:\ \ \ \ \ \ \ \ CS20S\n\ \n\ Assignment\:\ \ \ \ program\ information\ class\n\n\ Description\:\ \ \ \ class\ to\ print\ banners\ and\ closing\ messages\n\n\ \n\ *************************************************************\n
+comment1.params=
+comment1.target=ProgramInfo()
+comment2.params=name\ a
+comment2.target=java.lang.String\ getBanner(java.lang.String,\ java.lang.String)
+comment3.params=
+comment3.target=java.lang.String\ getClosingMessage()
+numComments=4

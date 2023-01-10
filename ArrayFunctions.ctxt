@@ -1,0 +1,10 @@
+#BlueJ class context
+comment0.target=ArrayFunctions
+comment0.text=\n\ Programmer\:\tRob\ Sveinson\n\ Class\:\t\tCS20S\n\ \n\ Assignment\:\tA2\ Sorting\ and\ Searching\n\n\ Description\:\tclass\ to\ do\ some\ standard\ array\ work,\ load\ and\ print\ to\ name\n\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ two\n
+comment1.params=maxSize
+comment1.target=ArrayFunctions(int)
+comment2.params=list\ len
+comment2.target=void\ printList(int[],\ int)
+comment3.params=list
+comment3.target=int\ loadList(int[])
+numComments=4
