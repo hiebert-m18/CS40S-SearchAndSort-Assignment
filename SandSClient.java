@@ -1,15 +1,15 @@
 /********************************************************************
- * Programmer:    sveinson
- * Class:  CS20S
+ * Programmer:      Hiebert
+ * Class:           CS40S
  *
- * Assignment: Client code for searching and sorting classes
- * Program Name:  SandSClient
+ * Assignment:      Client code for searching and sorting classes
+ * Program Name:    SandSClient
  *
- * Description: driver code used to implement various sorting and searching objects
+ * Description:     driver code used to implement various sorting and searching objects
  *
- * Input: an array, unsorted, varying types and sizes
+ * Input:           an array, unsorted, varying types and sizes
  *
- * Output: unsorted and sorted lists
+ * Output:          unsorted and sorted lists
  ***********************************************************************/
  
  // import java libraries here as needed
@@ -18,30 +18,30 @@ import java.text.DecimalFormat;
 import java.util.Random;
 import javax.swing.*;
 
-public class SandSClient {  // begin class
+public class SandSClient {                      // begin class
     
-    public static void main(String[] args) {  // begin main
+    public static void main(String[] args) {    // begin main
     
     // ********* declaration of constants **********
         
-        final int MAX = 50;        // max size of test array
+        final int MAX = 50;             // max size of test array
     
     // ********** declaration of variables **********
 
-        String strin;                // string data input from keyboard
-        String strout;                // processed info string to be output
-        String bannerOut;            // string to print banner to message dialogs
+        String strin;                   // string data input from keyboard
+        String strout;                  // processed info string to be output
+        String bannerOut;               // string to print banner to message dialogs
 
-        String prompt;                // prompt for use in input dialogs
+        String prompt;                  // prompt for use in input dialogs
 
-        String delim = "[ :]+";        // delimiter string for splitting input string
-        String tabSpace = "      ";    // six spaces
+        String delim = "[ :]+";         // delimiter string for splitting input string
+        String tabSpace = "      ";     // six spaces
         
-        int[] list = new int[MAX];          // TEST ARRAY
+        int[] list = new int[MAX];      // TEST ARRAY
         int actualLength = 0;
         
-        int key = 0;                // search key
-        int searchIndex = 0;        // index of key if found in list
+        int key = 0;                    // search key
+        int searchIndex = 0;            // index of key if found in list
 
 
     // **************** create objects **********************
@@ -52,7 +52,7 @@ public class SandSClient {  // begin class
         
     // ********** Print output Banner **********
     
-        System.out.println(programInfo.getBanner("put your name here", "A2 Search and Sort"));
+        System.out.println(programInfo.getBanner("Hiebert", "A2 Search and Sort"));
         
     // ************************ get input **********************
 
@@ -62,31 +62,31 @@ public class SandSClient {  // begin class
         // classes ***
 
         // create a sorter class
-//        Sorter s = new Sorter();
+        // Sorter s = new Sorter();
 
         // load, print, sort and print the list 
-       actualLength = arrayFunctions.loadList(list); 
-       arrayFunctions.printList(list, actualLength);
-//        s.bubbleSort(list, actualLength);
-//        arrayFunctions.printList(list, actualLength);
+        actualLength = arrayFunctions.loadList(list); 
+        arrayFunctions.printList(list, actualLength);
+        // s.bubbleSort(list, actualLength);
+        // arrayFunctions.printList(list, actualLength);
 
-    // **** quick sort ****
+        // **** quick sort ****
     
-        //re-load the list so it is once again unsorted
-        //print, sort and print again
-//        actualLength = arrayFunctions.loadList(list);
-//        arrayFunctions.printList(list, actualLength);
-//        s.quickSort(list, 0, list.length - 1);
-//        arrayFunctions.printList(list, actualLength);
+        // re-load the list so it is once again unsorted
+        // print, sort and print again
+        // actualLength = arrayFunctions.loadList(list);
+        // arrayFunctions.printList(list, actualLength);
+        // s.quickSort(list, 0, list.length - 1);
+        // arrayFunctions.printList(list, actualLength);
 
-    // **** selection sort ****
+        // **** selection sort ****
             
         // re-load the list so it is once again unsorted
         // print, sort and print again
-//        actualLength = arrayFunctions.loadList(list);
-//        arrayFunctions.printList(list, actualLength);
-//        s.selectionSort(list, actualLength);
-//        arrayFunctions.printList(list, actualLength);
+        // actualLength = arrayFunctions.loadList(list);
+        // arrayFunctions.printList(list, actualLength);
+        // s.selectionSort(list, actualLength);
+        // arrayFunctions.printList(list, actualLength);
         
         // ************** searchin **********************
         
@@ -98,23 +98,24 @@ public class SandSClient {  // begin class
         */
         
         // create the searcher object
-//        Searcher searcher = new Searcher();
-//        
-//        //actualLength = arrayFunctions.loadList(list);
-//        key = rnd.nextInt(50) + 1;
-//        key++;
-//        searchIndex = searcher.linearSearch(list, actualLength, key);
-//        //s.quickSort(list, 0, list.length - 1);
-//        //searchIndex = searcher.linearSearch(list, actualLength, key);
-//        searchIndex = searcher.binarySearch(list, actualLength, key);
-//       System.out.println(key + " at " + searchIndex);
+        // Searcher searcher = new Searcher();
+        //        
+        // actualLength = arrayFunctions.loadList(list);
+        // key = rnd.nextInt(50) + 1;
+        // key++;
+        // searchIndex = searcher.linearSearch(list, actualLength, key);
+        // s.quickSort(list, 0, list.length - 1);
+        // searchIndex = searcher.linearSearch(list, actualLength, key);
+        // searchIndex = searcher.binarySearch(list, actualLength, key);
+        // System.out.println(key + " at " + searchIndex);
 
     // ************************ print output ****************************
     
     
-        // ******** closing message *********
-        
+    // ******** closing message *********
+    
         System.out.println(programInfo.getClosingMessage());
+    
     }  // end main
     
 

@@ -2,14 +2,13 @@
 import java.util.Random;
 
 /* **********************************************************
- * Programmer:	Rob Sveinson
- * Class:		CS20S
+ * Programmer:          Hiebert
+ * Class:               CS40S
  * 
- * Assignment:	A2 Sorting and Searching
+ * Assignment:          A2 Sorting and Searching
  *
- * Description:	class to do some standard array work, load and print to name
-                two
- **************************************************************/
+ * Description:         class to do some standard array work, load and print to name
+ ************************************************************/
  
  // import files here as needed
   

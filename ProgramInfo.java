@@ -1,14 +1,11 @@
 /* **********************************************************
- * Programmer:    your name here
- * Class:        CS20S
+ * Programmer:      Hiebert
+ * Class:           CS40S
  * 
- * Assignment:    program information class
+ * Assignment:      program information class
  *
- * Description:    class to print banners and closing messages
- *
- * 
- * *************************************************************
- */
+ * Description:     class to print banners and closing messages
+ * **********************************************************/
  
  // import files here as needed
  
@@ -31,9 +28,9 @@
          String bannerOut = "";
          
         bannerOut = "*******************************************\n";
-        bannerOut += "Name:       " + name + "\n";
+        bannerOut += "Name:         " + name + "\n";
         bannerOut += "Class:        CS40S\n";
-        bannerOut += "Assignment:    " + a + "\n";
+        bannerOut += "Assignment:   " + a + "\n";
         bannerOut += "*******************************************\n\n";         
          
         return bannerOut;
