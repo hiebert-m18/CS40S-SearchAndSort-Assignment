@@ -62,7 +62,7 @@ public class SandSClient {                      // begin class
         // classes ***
 
         // create a sorter class
-        // Sorter s = new Sorter();
+        Sorter s = new Sorter();
 
         // load, print, sort and print the list 
         actualLength = arrayFunctions.loadList(list); 
