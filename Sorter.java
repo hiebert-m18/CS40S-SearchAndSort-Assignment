@@ -50,6 +50,33 @@ public class Sorter
         }// end for
     }// end selectionSort
     
+    public void quickSort(int[] list, int low, int high) {
+        if (low < high) {
+            int pivotSpot = this.lomuto(list, low, high);
+            quickSort(list, low, pivotSpot - 1); // first half of list
+            quickSort(list, pivotSpot + 1, high); // second half of list
+        }// end if
+    }// end quickSort
+    
+    public int lomuto(int[] list, int low, int high) {
+        int pivot = list[high];
+        
+        int pivotSpot = low - 1;
+        
+        for (int i = low; i < high; i++) {
+            if (list[i] <= pivot) {
+                pivotSpot += 1;
+                this.swap(list, i, pivotSpot);
+            }// end if
+        }// end for
+        
+        pivotSpot += 1;
+        
+        this.swap(list, high, pivotSpot);
+        
+        return pivotSpot;
+    }// end lomuto partition scheme
+    
     public void swap(int[] l, int m, int n) {
         int tempM = l[m];
         int tempN = l[n];

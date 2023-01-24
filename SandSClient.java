@@ -70,14 +70,16 @@ public class SandSClient {                      // begin class
         // s.bubbleSort(list, actualLength);
         // arrayFunctions.printList(list, actualLength);
 
+        System.out.println();
+        
         // **** quick sort ****
     
         // re-load the list so it is once again unsorted
         // print, sort and print again
         // actualLength = arrayFunctions.loadList(list);
         // arrayFunctions.printList(list, actualLength);
-        // s.quickSort(list, 0, list.length - 1);
-        // arrayFunctions.printList(list, actualLength);
+        s.quickSort(list, 0, list.length - 1);
+        arrayFunctions.printList(list, actualLength);
 
         // **** selection sort ****
             
