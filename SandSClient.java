@@ -24,7 +24,7 @@ public class SandSClient {                      // begin class
     
     // ********* declaration of constants **********
         
-        final int MAX = 50;             // max size of test array
+        final int MAX = 10;             // max size of test array
     
     // ********** declaration of variables **********
 
