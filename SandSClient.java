@@ -78,7 +78,7 @@ public class SandSClient {                      // begin class
         // print, sort and print again
         // actualLength = arrayFunctions.loadList(list);
         // arrayFunctions.printList(list, actualLength);
-        s.quickSort(list, 0, list.length - 1);
+        s.hoareQuickSort(list, 0, list.length - 1);
         arrayFunctions.printList(list, actualLength);
 
         // **** selection sort ****

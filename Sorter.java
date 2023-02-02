@@ -50,13 +50,21 @@ public class Sorter
         }// end for
     }// end selectionSort
     
-    public void quickSort(int[] list, int low, int high) {
+    public void hoareQuickSort(int[] list, int low, int high) {
         if (low < high) {
             int pivotSpot = this.hoare(list, low, high);
-            quickSort(list, low, pivotSpot - 1); // first half of list
-            quickSort(list, pivotSpot + 1, high); // second half of list
+            hoareQuickSort(list, low, pivotSpot); // first half of list
+            hoareQuickSort(list, pivotSpot + 1, high); // second half of list
         }// end if
-    }// end quickSort
+    }// end hoareQuickSort
+    
+    public void lomutoQuickSort(int[] list, int low, int high) {
+        if (low < high) {
+            int pivotSpot = this.lomuto(list, low, high);
+            lomutoQuickSort(list, low, pivotSpot - 1); // first half of list
+            lomutoQuickSort(list, pivotSpot + 1, high); // second half of list
+        }// end if
+    }// end lomutoQuickSort
     
     public int lomuto(int[] list, int low, int high) {
         int pivot = list[high];
@@ -78,45 +86,26 @@ public class Sorter
     }// end lomuto partition scheme
     
     public int hoare(int[] list, int low, int high) {
-        int pivot = list[high];
-        int i = low;
-        int j = high - 1;
-        
-        while (i < j) {
-            while (list[i] < pivot) {
-                i++;
-            }// end while
-            while (list[j] > pivot) {
-                j--;
-            }// end while
-            if (i < j) {
-                this.swap(list, i, j);   
-            }// end if
-        }// end while
-        
-        this.swap(list, high, i);
-        
-        return i;
-    }
+        int pivot = list[(low + high)/2];
+        int i = low - 1;
+        int j = high + 1;
     
-    // public int hoare(int[] list, int low, int high) {
-        // int pivot = list[(low + high)/2];
-        // int i = low - 1;
-        // int j = high + 1;
-        
-        // while (true) {
-            // do {
-                // i++;
-            // } while (list[i] < pivot);
-            // do {
-                // j--;
-            // } while (list[j] > pivot);
-            // if (i >= j) {
-                // return j;
-            // }
-            // this.swap(list, i, j);
-        // }// end while
-    // }// end hoare
+        while (true) {
+            do {
+                i++;
+            } while (list[i] < pivot);
+    
+            do {
+                j--;
+            } while (list[j] > pivot);
+    
+            if (i >= j) {
+                return j;
+            }// end if
+    
+            this.swap(list, i, j);
+        }// end while
+    }// end hoare partition scheme
     
     public void swap(int[] l, int m, int n) {
         int tempM = l[m];
