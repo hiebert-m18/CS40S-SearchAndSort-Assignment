@@ -53,7 +53,7 @@ public class Sorter
     public void hoareQuickSort(int[] list, int low, int high) {
         if (low < high) {
             int pivotSpot = this.hoare(list, low, high);
-            hoareQuickSort(list, low, pivotSpot); // first half of list
+            hoareQuickSort(list, low, pivotSpot); // first half of list (slightly different for hoare than for lomuto)
             hoareQuickSort(list, pivotSpot + 1, high); // second half of list
         }// end if
     }// end hoareQuickSort
