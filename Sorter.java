@@ -50,7 +50,11 @@ public class Sorter
         }// end for
     }// end selectionSort
     
-    public void hoareQuickSort(int[] list, int low, int high) {
+    public void quickSort(int[] list, int low, int high) {
+        hoareQuickSort(list, low, high);
+    }// end quickSort
+    
+    private void hoareQuickSort(int[] list, int low, int high) {
         if (low < high) {
             int pivotSpot = this.hoare(list, low, high);
             hoareQuickSort(list, low, pivotSpot); // first half of list (slightly different for hoare than for lomuto)
@@ -58,7 +62,7 @@ public class Sorter
         }// end if
     }// end hoareQuickSort
     
-    public void lomutoQuickSort(int[] list, int low, int high) {
+    private void lomutoQuickSort(int[] list, int low, int high) {
         if (low < high) {
             int pivotSpot = this.lomuto(list, low, high);
             lomutoQuickSort(list, low, pivotSpot - 1); // first half of list
@@ -66,7 +70,7 @@ public class Sorter
         }// end if
     }// end lomutoQuickSort
     
-    public int lomuto(int[] list, int low, int high) {
+    private int lomuto(int[] list, int low, int high) {
         int pivot = list[high];
         
         int pivotSpot = low - 1;
@@ -85,7 +89,7 @@ public class Sorter
         return pivotSpot;
     }// end lomuto partition scheme
     
-    public int hoare(int[] list, int low, int high) {
+    private int hoare(int[] list, int low, int high) {
         int pivot = list[(low + high)/2];
         int i = low - 1;
         int j = high + 1;
@@ -107,7 +111,7 @@ public class Sorter
         }// end while
     }// end hoare partition scheme
     
-    public void swap(int[] l, int m, int n) {
+    private void swap(int[] l, int m, int n) {
         int tempM = l[m];
         int tempN = l[n];
         l[n] = tempM;
