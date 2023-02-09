@@ -62,10 +62,10 @@ public class SandSClient {                      // begin class
         // classes ***
 
         // create a sorter class
-        Sorter s = new Sorter();
+        // Sorter s = new Sorter();
 
         // load, print, sort and print the list 
-        actualLength = arrayFunctions.loadList(list); 
+        // actualLength = arrayFunctions.loadList(list); 
         // arrayFunctions.printList(list, actualLength);
         // s.bubbleSort(list, actualLength);
         // arrayFunctions.printList(list, actualLength);
@@ -78,8 +78,8 @@ public class SandSClient {                      // begin class
         // print, sort and print again
         // actualLength = arrayFunctions.loadList(list);
         // arrayFunctions.printList(list, actualLength);
-        s.quickSort(list, 0, list.length - 1);
-        arrayFunctions.printList(list, actualLength);
+        // s.quickSort(list, 0, list.length - 1);
+        // arrayFunctions.printList(list, actualLength);
 
         // **** selection sort ****
             
@@ -100,16 +100,16 @@ public class SandSClient {                      // begin class
         */
         
         // create the searcher object
-        Searcher searcher = new Searcher();
+        // Searcher searcher = new Searcher();
         //        
         // actualLength = arrayFunctions.loadList(list);
-        key = rnd.nextInt(50) + 1;
+        // key = rnd.nextInt(50) + 1;
         // key++;
         // searchIndex = searcher.linearSearch(list, actualLength, key);
         // s.quickSort(list, 0, list.length - 1);
         // searchIndex = searcher.linearSearch(list, actualLength, key);
-        searchIndex = searcher.binarySearch(list, actualLength, key);
-        System.out.println(key + " at " + searchIndex);
+        // searchIndex = searcher.binarySearch(list, actualLength, key);
+        // System.out.println(key + " at " + searchIndex);
         // System.out.println(list[searchIndex]);
 
     // ************************ print output ****************************
