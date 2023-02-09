@@ -7,17 +7,10 @@
  */
 public class Searcher
 {
-    // instance variables - replace the example below with your own
-    private int x;
-
     /**
      * Constructor for objects of class Searcher
      */
-    public Searcher()
-    {
-        // initialise instance variables
-        x = 0;
-    }
+    public Searcher() {}
 
     /**
      * An example of a method - replace this comment with your own
@@ -25,9 +18,56 @@ public class Searcher
      * @param  y  a sample parameter for a method
      * @return    the sum of x and y
      */
-    public int sampleMethod(int y)
+    public int linearSearch(int[] list, int len, int key)
     {
-        // put your code here
-        return x + y;
-    }
-}
+        int index = -1;
+        
+        for (int i = 0; i < len; i++) {
+            if (list[i] == key) {
+                index = i;
+                break;
+            }// end if
+        }// end for
+        
+        return index;
+    }// end linearSearch on unordered
+    
+    // public int linearSearch(int[] list, int len, int key) {
+        // int index = -1;
+        
+        // for (int i = 0; i < len; i++) {
+            // if (list[i] == key) {
+                // index = i;
+                // break;
+            // } else if (list[i] > key) {
+                // break;
+            // }// end if
+        // }// end for
+        
+        // return index;
+    // }// end linearSearch on ordered list
+    
+    public int binarySearch(int[] list, int len, int key)
+    {
+        int index = -1;
+        
+        int first = 0;
+        int last = len;
+        int mid = 0;
+        
+        while (first <= last) {
+            mid = (first+last)/2;
+            
+            if (list[mid] < key) {
+                first = mid + 1;
+            } else if (list[mid] > key) {
+                last = mid - 1;
+            } else {
+                index = mid;
+                break;
+            }// end if
+        }// end while
+        
+        return index;
+    }// end binarySearch
+}// end Searcher
