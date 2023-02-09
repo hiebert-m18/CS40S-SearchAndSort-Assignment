@@ -1,22 +1,13 @@
 
 /**
- * Write a description of class Searcher here.
- *
- * @author (your name)
- * @version (a version number or a date)
+ * A class to search lists of ints
  */
 public class Searcher
 {
-    /**
-     * Constructor for objects of class Searcher
-     */
     public Searcher() {}
-
+    
     /**
-     * An example of a method - replace this comment with your own
-     *
-     * @param  y  a sample parameter for a method
-     * @return    the sum of x and y
+     * Linear Search for Unordered Lists
      */
     public int linearSearch(int[] list, int len, int key)
     {
@@ -32,21 +23,27 @@ public class Searcher
         return index;
     }// end linearSearch on unordered
     
-    // public int linearSearch(int[] list, int len, int key) {
-        // int index = -1;
+    /**
+     * Linear Search for Ordered Lists
+     */
+    public int linearSearchVariation(int[] list, int len, int key) {
+        int index = -1;
         
-        // for (int i = 0; i < len; i++) {
-            // if (list[i] == key) {
-                // index = i;
-                // break;
-            // } else if (list[i] > key) {
-                // break;
-            // }// end if
-        // }// end for
+        for (int i = 0; i < len; i++) {
+            if (list[i] == key) {
+                index = i;
+                break;
+            } else if (list[i] > key) {
+                break;
+            }// end if
+        }// end for
         
-        // return index;
-    // }// end linearSearch on ordered list
+        return index;
+    }// end linearSearch on ordered list
     
+    /**
+     * Binary Search for Ordered Lists
+     */
     public int binarySearch(int[] list, int len, int key)
     {
         int index = -1;

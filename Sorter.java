@@ -1,27 +1,13 @@
 
 /**
- * Write a description of class Sorter here.
- *
- * @author (your name)
- * @version (a version number or a date)
+ * A class to sort lists of ints
  */
 public class Sorter
 {
-    // instance variables - replace the example below with your own
+    public Sorter() {}
 
     /**
-     * Constructor for objects of class Sorter
-     */
-    public Sorter()
-    {
-        //
-    }
-
-    /**
-     * An example of a method - replace this comment with your own
-     *
-     * @param  y  a sample parameter for a method
-     * @return    the sum of x and y
+     * Bubble Sort
      */
     public void bubbleSort(int[] list, int len)
     {
@@ -34,6 +20,9 @@ public class Sorter
         }// end for
     }// end bubbleSort
     
+    /**
+     * Selection Sort
+     */
     public void selectionSort(int[] list, int len)
     {
         int index = 0;
@@ -50,10 +39,16 @@ public class Sorter
         }// end for
     }// end selectionSort
     
+    /**
+     * Quick Sort method
+     */
     public void quickSort(int[] list, int low, int high) {
         hoareQuickSort(list, low, high);
     }// end quickSort
     
+    /**
+     * Quick Sort with Hoare Partition Scheme
+     */
     private void hoareQuickSort(int[] list, int low, int high) {
         if (low < high) {
             int pivotSpot = this.hoare(list, low, high);
@@ -62,6 +57,9 @@ public class Sorter
         }// end if
     }// end hoareQuickSort
     
+    /**
+     * Quick Sort with Lomuto Partition Scheme
+     */
     private void lomutoQuickSort(int[] list, int low, int high) {
         if (low < high) {
             int pivotSpot = this.lomuto(list, low, high);
@@ -70,6 +68,9 @@ public class Sorter
         }// end if
     }// end lomutoQuickSort
     
+    /**
+     * Lomuto Partition Scheme
+     */
     private int lomuto(int[] list, int low, int high) {
         int pivot = list[high];
         
@@ -89,6 +90,9 @@ public class Sorter
         return pivotSpot;
     }// end lomuto partition scheme
     
+    /**
+     * Hoare Partition Scheme
+     */
     private int hoare(int[] list, int low, int high) {
         int pivot = list[(low + high)/2];
         int i = low - 1;
@@ -111,6 +115,9 @@ public class Sorter
         }// end while
     }// end hoare partition scheme
     
+    /**
+     * Swap method
+     */
     private void swap(int[] l, int m, int n) {
         int tempM = l[m];
         int tempN = l[n];

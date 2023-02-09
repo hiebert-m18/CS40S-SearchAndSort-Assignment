@@ -78,7 +78,7 @@ public class SandSClient {                      // begin class
         // print, sort and print again
         // actualLength = arrayFunctions.loadList(list);
         // arrayFunctions.printList(list, actualLength);
-        // s.quickSort(list, 0, list.length - 1);
+        s.quickSort(list, 0, list.length - 1);
         arrayFunctions.printList(list, actualLength);
 
         // **** selection sort ****
@@ -105,10 +105,10 @@ public class SandSClient {                      // begin class
         // actualLength = arrayFunctions.loadList(list);
         key = rnd.nextInt(50) + 1;
         // key++;
-        searchIndex = searcher.linearSearch(list, actualLength, key);
+        // searchIndex = searcher.linearSearch(list, actualLength, key);
         // s.quickSort(list, 0, list.length - 1);
         // searchIndex = searcher.linearSearch(list, actualLength, key);
-        // searchIndex = searcher.binarySearch(list, actualLength, key);
+        searchIndex = searcher.binarySearch(list, actualLength, key);
         System.out.println(key + " at " + searchIndex);
         // System.out.println(list[searchIndex]);
 
